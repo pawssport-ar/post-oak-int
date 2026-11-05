@@ -1,0 +1,23 @@
+{
+  "name": "post-oak-business-banking",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Post Oak Business Banking: a full-stack banking dashboard case study (Next.js + NestJS monorepo).",
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @post-oak/contracts build && pnpm --parallel --filter @post-oak/contracts --filter @post-oak/api --filter @post-oak/web dev",
+    "build": "pnpm --filter @post-oak/api build && pnpm --filter @post-oak/web build",
+    "start": "node scripts/start-all.mjs",
+    "test": "pnpm --filter @post-oak/api test",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}

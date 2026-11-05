@@ -1,0 +1,10 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+# Native build steps we do not need: Next image optimisation is unused and the
+# ESLint resolver ships a prebuilt binary.
+ignoredBuiltDependencies:
+  - '@scarf/scarf'
+  - sharp
+  - unrs-resolver
